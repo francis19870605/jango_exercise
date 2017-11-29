@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/define.css">
+    <style>
+        label{
+            display: inline-block;
+            width: 80px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<form action="/login/" method="get">
+    <p>
+        <label for="username">用户名:</label>
+        <input id="username" type="text"/>
+    </p>
+    <p>
+        <label for="password">密码:</label>
+        <input id="password" type="password"/>
+        <input type="submit" value="提交"/>
+    </p>
+</form>
+<script src="/static/jquery/jquery-3.2.1.js"></script>
+</body>
+</html>
