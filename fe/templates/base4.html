@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .c1{
+            background-color: #ffea10;
+            text-align: center;
+            height: 35px;
+            line-height: 35px;
+        }
+        .c1:hover{
+            background-color: red;
+        }
+        .c2{
+            background-color: #28a745;
+            text-align: center;
+            font-size: 10px;
+            min-height: 100px;
+            line-height: 100px;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div style="border: 1px solid red;height: 500px;width: 200px;">
+        <div class="item">
+            <div class="c1">MENU</div>
+            <div class="c2">CONTENT</div>
+        </div>
+        <div class="item">
+            <div class="c1">MENU</div>
+            <div class="c2 hide">CONTENT</div>
+        </div>
+        <div class="item">
+            <div class="c1">MENU</div>
+            <div class="c2 hide">CONTENT</div>
+        </div>
+        <div class="item">
+            <div class="c1">MENU</div>
+            <div class="c2 hide">CONTENT</div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="../static/jquery/jquery-3.2.1.js"></script>
+<script>
+    $('.c1').click(function () {
+        //console.log(this);
+        $(this).next().removeClass('hide');
+        $(this).parent().siblings().find('.c2').addClass('hide');
+    })
+</script>
+</body>
+</html>
+

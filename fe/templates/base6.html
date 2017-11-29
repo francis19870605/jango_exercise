@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="t1" type="text"/>
+<input id="o1" type="button" value="插入"/>
+<input id="o2" type="button" value="删除"/>
+<input id="o3" type="button" value="复制"/>
+
+<ol id="u1">
+    <li>111</li>
+    <li>222</li>
+    <li>113331</li>
+    <li>144411</li>
+</ol>
+
+<script src="../static/jquery/jquery-1.11.3.min.js"></script>
+<script>
+    $('#o1').click(function () {
+        var v = $('#t1').val();
+        var template = "<li>" + v + "</li>";
+        $('#u1').append(template);
+    });
+
+    $('#o2').click(function () {
+        var index = $('#t1').val();
+        $('#u1 li').eq(index).remove();
+    });
+</script>
+</body>
+</html>

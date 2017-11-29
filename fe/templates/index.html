@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+    <script type="text/javascript" src="../static/jquery/jquery-3.2.1.js"></script>
+</head>
+<body>
+<form method="get", action="/auth/">
+    <input type="text" name="username" value="user" />
+    <input type="text" name="password" value="pwd" />
+    <input type="submit" value="提交" />
+</form>
+<script>
+    $(function(){
+        $.get('/getRegion/', {val: 'ShanDong'}, function (regions){
+            console.log(regions);
+        });
+    });
+</script>
+</body>
+</html>
